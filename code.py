@@ -1,0 +1,5 @@
+fig = plt.figure(figsize=(10,4),)
+ax=sns.kdeplot(Bankdata.loc[(Bankdata['term_deposit'] == 0),'month_int'] , color='#F08080',shade=True,label='Refused T.D')
+ax=sns.kdeplot(Bankdata.loc[(Bankdata['term_deposit'] == 1),'month_int'] , color='#00FA9A',shade=True, label='Accepted T.D')
+ax.set(xlabel='Months', ylabel='Frequency')
+plt.title('Term Deposits by Month')
